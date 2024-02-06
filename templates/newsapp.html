@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<body>
+    <h1 style="background-color: chartreuse;">NEWS App</h1>
+    
+    <marquee onmouseover="stop()" onmouseout="start()" style="background-color: aqua; font-weight: bolder; padding: 20px; font-size: large;">
+        {%for i in newsData%}
+           <a href="/newsdetails/{{i.id}}" 
+              style="color: black; cursor: pointer; font-weight: bolder;">
+                {{i.title}}
+            </a>   &nbsp;&nbsp;&nbsp;&nbsp;
+        {%endfor%}
+    </marquee>
+</body>
+{%endblock%}

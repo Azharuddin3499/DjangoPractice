@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block content%}
+<body>
+    <h1 style="background-color: aqua;">NEWS Details</h1>
+    <h2 style="background-color: aqua;" >{{newsDetails.title}}</h2>
+    <p>{{newsDetails.news_desc | safe}}</p>
+    {%for i in serviceData%}
+        <div>
+            <label style="background-color: aqua;">{{i.service_icon}}</label><br>
+            <label style="background-color: pink;">{{i.service_title}}</label><br>
+            <p style="background-color: yellow;">{{i.service_dec}}</p>
+        </div>
+    {%endfor%}
+      
+</body>
+{% endblock content %}

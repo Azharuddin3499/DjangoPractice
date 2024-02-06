@@ -1,0 +1,35 @@
+{%extends "base.html"%}
+{%block content%}
+<style>
+    body{
+        background-color: white;
+    }
+</style>
+<body>
+    <div><h1>caluclator</h1></div>
+    <form  method="post">
+        {%csrf_token%}
+        <div>
+            <label>Value 1</label>
+            <input type="number" name="num1">
+        </div>
+        <label>Select Operator</label>
+        <select name="opr">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <div>
+            <label>Value 2</label>
+            <input type="number" name="num2">
+        </div>
+
+        <button type="submit">Calculate</button><br/>
+        <label for="">Output</label>
+        <input type="number" value="{{data}}"/>
+    </form>
+</body>
+
+
+{%endblock%}

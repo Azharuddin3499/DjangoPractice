@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<body>
+    <div class="card">Weather App</div>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City" spellcheck="false">
+            <button><img src="static/images/search.png"></button>
+        </div>
+        <div class="error">Invalid city name</div>
+        <div class="weather">
+            <img src="static/images/rain.png" class="weather-icon">
+            <h1 id="t" class="temp"></h1>
+            <h2 id="c" class="city"></h2>
+            <div class="details">
+                <div class="col">
+                        <img src="static/images/humidity.png">
+                    <div>
+                        <p class="humidity"></p>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                        <img src="static/images/wind.png">
+                    <div>
+                        <p class="wind"></p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="static/script.js"></script>
+</body>
+
+</html>
+{% endblock%}
